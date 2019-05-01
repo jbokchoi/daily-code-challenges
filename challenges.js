@@ -17,7 +17,6 @@ function sayHello() {
   return 'Hello!'
 }
 
-
 /*-----------------------------------------------------------------
 Challenge: 01-addOne
 
@@ -84,11 +83,12 @@ sumNumbers([]) //=> 0
 -----------------------------------------------------------------*/
 // Your solution for 03-sumNumbers here:
 
-function sumNumbers(){
-  
+function sumNumbers(arr){
+  var sum = 0; 
+    for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  } return sum;
 }
-
-
 
 /*-----------------------------------------------------------------
 Challenge: 04-addList
@@ -109,9 +109,13 @@ add(7,-12) //=> -5
 -----------------------------------------------------------------*/
 // Your solution for 04-addList here:
 
-
-
-
+function addList(...add) {
+  var sum = 0;
+    for (i = 0; i <add.length; i++){
+      sum += add[i];
+    }
+    return sum;
+}
 
 /*-----------------------------------------------------------------
 Challenge: 05-computeRemainder
@@ -133,9 +137,10 @@ computeRemainder(10.5, 3) //=> 1.5
 -----------------------------------------------------------------*/
 // Your solution for 05-computeRemainder:
 
-
-
-
+function computeRemainder (x,y) {
+  if (y === 0) return Infinity;
+  return (x % y);    
+}
 
 /*-----------------------------------------------------------------
 Challenge: 06-range
@@ -156,6 +161,16 @@ range(5,2) //=> "First argument must be less than second"
 -----------------------------------------------------------------*/
 // Your solution for 06-range here:
 
+function range(x,y){
+  if (x > y) 
+  return "First argument must be less than second";
+  
+  var range = [];
+  for (var i = x; i < y; i++) {
+    range.push(i);
+  }
+  return range;
+}
 
 
 
@@ -175,7 +190,14 @@ reverseUpcaseString("SEI Rocks!"); //=> "!SKCOR IES"
 -----------------------------------------------------------------*/
 // Your solution for 07-reverseUpcaseString here:
 
-
+function reverseUpcaseString(word){
+  var character = '';
+  for (let i = 0. i < word.length; i++) {
+  character += word[i];
+  return word;
+  }
+}
+// console.log(reverseString('jessica'));
 
 
 
